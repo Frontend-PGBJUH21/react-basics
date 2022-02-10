@@ -1,13 +1,66 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.container {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  margin: 2rem;
+}
+
+button {
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  outline: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+footer {
+  background-color: gray;
+  padding: 1rem;
+  width: 100vh;
+  height: 5rem;
+  margin: 2rem;
+}
+
+.reuse-btn {
+  padding: 0.7rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: magenta;
+  color: white;
+  outline: none;
+  border-radius: 5px;
+}
+
+.reuse-btn:hover {
+  background-color: white;
+  color: magenta;
+}
+
+.name {
+  color: purple;
 }
