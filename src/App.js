@@ -1,58 +1,43 @@
-import { useState } from "react";
-import HomePage from "./components/HomePage";
-import ClickerHooks from "./components/ClickerHooks";
-import ClickerClass from "./components/ClickerClass";
-import AgeCount from "./components/AgeCount";
-import NameTag from "./components/NameTag";
+import { useEffect, useState } from "react";
+import Layout from "./components/Layout";
+import ControlledInput from "./components/ControlledInput";
+import MultipleInput from "./components/MultipleInput";
 
-const initialNames = [
-  { firstName: "Helena", lastName: "Johansson" },
-  { firstName: "Tore", lastName: "Toresson" },
-  { firstName: "Doris", lastName: "Dorisson" },
-];
+const initProfile = {
+  publicRepos: null,
+  website: null,
+};
 
 function App() {
-  const [names, setNames] = useState(initialNames);
-
   return (
-    <div className="container">
-      {names.map((n, i) => {
-        return (
-          <NameTag key={i} firstName={n.firstName} lastName={n.lastName} />
-        );
-      })}
-    </div>
+    <Layout>
+      <MultipleInput />
+    </Layout>
   );
 }
 
 export default App;
 
 /*
+const [profile, setProfile] = useState(initProfile);
 
-const nameStyle = {
-  color: "green",
-  border: "1px solid green",
-};
+  // get users from github API
+  async function getProfile() {
+    const response = await fetch("https://api.github.com/users/pickadolly");
+    const json = await response.json();
 
-const nameStyleTitle = {
-  borderStyle: "dotted",
-  letterSpacing: "1px",
-};
+    setProfile({
+      publicRepos: json.public_repos,
+      website: json.blog,
+    });
+  }
 
- <NameTag firstName={names[0].firstName} lastName={names[0].lastName} />
-      <NameTag firstName={names[1].firstName} lastName={names[1].lastName} />
-      <NameTag firstName={names[2].firstName} lastName={names[2].lastName} />
-
-<div className="container">
-      <h1 style={{ ...nameStyle, ...nameStyleTitle }}>Name List</h1>
-      <h3 style={{ color: "magenta", border: "1p solid black" }}>Hej hej</h3>
-      <h3 style={nameStyle}>Hej hej</h3>
-      <NameTag
-        style={{ color: "pink" }}
-        firstName="Helena"
-        lastName="Johansson"
-      />
-      <NameTag firstName="Nisse" lastName="Johansson" />
-      <NameTag firstName="Sara" lastName="Johansson" />
-    </div>
-*/
+  // Load github profile data from API when page mounts
+  useEffect(() => {
+    getProfile();
+    //only load this one time when page is mounted
+  }, []);
+  
+    <h2>Fetch Data useEffect Example</h2>
+      <h3>{`Public repos:  ${profile.publicRepos}`}</h3>
+      <h3>{`Website:  ${profile.website}`}</h3>*/

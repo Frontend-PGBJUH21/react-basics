@@ -1,5 +1,5 @@
-import Button from "./Button";
-import ReusableButton from "./ReusableButton";
+import Button from "../components/Button";
+import ReusableButton from "../components/ReusableButton";
 
 const About = () => {
   return (
