@@ -1,18 +1,40 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { v4 as uuidv4 } from "uuid";
+
 import Layout from "./components/Layout";
 import ControlledInput from "./components/ControlledInput";
 import MultipleInput from "./components/MultipleInput";
 
-const initProfile = {
-  publicRepos: null,
-  website: null,
-};
+/*
+I ert projekt skulle ni kunna använda er av mockdata, alltså "låtsas" data. 
+Det går bra att skapa tex en array med objekt inne i samma komponent som ni vill 
+ska rendera arrayen. Se till att lägga den utanför själva komponenten för att undvika
+problem.
+*/
+
+const initialNames = [
+  { firstName: "Helena", lastName: "Johansson" },
+  { firstName: "Tore", lastName: "Toresson" },
+  { firstName: "Doris", lastName: "Dorisson" },
+  { firstName: "Janne", lastName: "Jannesson" },
+];
 
 function App() {
+  const [names, setNames] = useState(initialNames);
+  // names = array med object
+  // return an array with 2 values, one is getter and one is setter
+
   return (
-    <Layout>
-      <MultipleInput />
-    </Layout>
+    <div className="container">
+      {names.map((v, i) => {
+        // names = array med object
+        // loopar igenom array, för varje namn som är i arrayen
+        // så ska vi visa en NameTag komponent
+        return (
+          <NameTag key={i} firstName={v.firstName} lastName={v.lastName} />
+        );
+      })}
+    </div>
   );
 }
 

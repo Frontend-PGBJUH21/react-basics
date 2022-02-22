@@ -30,8 +30,8 @@ const MultipleInput = () => {
   };
 
   return (
-    <div>
-      <h1>Form</h1>
+    <div className="sass">
+      <h1 className="sass__h1">Form</h1>
       <h2>Controlled Inputs</h2>
       <div>
         <form className="form">

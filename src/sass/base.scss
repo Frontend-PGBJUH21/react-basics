@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.container {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+p {
+  margin: 2rem;
+}
+
+button {
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  outline: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+footer {
+  background-color: gray;
+  padding: 1rem;
+  width: 100vh;
+  height: 5rem;
+  margin: 2rem;
+}
+
+.reuse-btn {
+  padding: 0.7rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: magenta;
+  color: white;
+  outline: none;
+  border-radius: 5px;
+}
+
+.reuse-btn:hover {
+  background-color: white;
+  color: magenta;
+}
+
+.name {
+  color: purple;
+}
+
+form {
+  height: 40px;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+input {
+  width: 80%;
+  padding: 4px 18px;
+  background: #d7d8d8;
+  color: #f9f9f9;
+  border: 1px solid #33383e;
+}
+
+input::placeholder {
+  color: #696f77;
+}
+
+/*button {
+    width: 20%;
+    background: #f06292;
+    color: #f9f9f9;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid #3c424a;
+    cursor: pointer;
+    transition: all 200ms;
+  }
+  */
+
+button:hover {
+  background: #2f876b;
+  color: #fff;
+  border: 2px solid aquamarine;
+}
+
+.form-btn {
+  background-color: aquamarine;
+  width: 10rem;
+  margin-top: 1rem;
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid #000;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.25rem;
+}
+
+.sass {
+  color: pink;
+
+  &__h1  {
+    text-transform: uppercase;
+  }
+}
+
+.nametag {
+  margin: 1rem;
+  width: 14rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border: 3px solid black;
+  -webkit-box-shadow: -2px 2px 8px -1px #000000;
+  box-shadow: -2px 2px 8px -1px #000000;
+}
